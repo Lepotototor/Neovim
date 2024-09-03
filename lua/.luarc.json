@@ -1,0 +1,7 @@
+{
+    "diagnostics.globals": [
+        "vim",
+        "dashboard",
+        "on_attach"
+    ]
+}
