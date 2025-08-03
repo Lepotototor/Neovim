@@ -14,7 +14,7 @@ return {
         ensure_installed = {
           "lua_ls",
           -- "asm-lsp",
-          -- "clangd",
+          "clangd",
         },
       })
     end,

@@ -2,6 +2,10 @@
     "diagnostics.globals": [
         "vim",
         "dashboard",
-        "on_attach"
+        "on_attach",
+        "themes",
+        "current",
+        "nb_themes",
+        "theme_manager"
     ]
 }

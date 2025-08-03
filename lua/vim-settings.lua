@@ -9,6 +9,9 @@ vim.cmd('filetype on')
 
 -- Activer la coloration syntaxique
 vim.cmd('syntax on')
+vim.opt.termguicolors = true
+vim.diagnostic.config({ virtual_text = false, virtual_lines = { current_line = true }, })
+vim.cmd.colorscheme("rose-pine-dawn")
 
 -- Activer l'auto-indentation
 vim.o.autoindent = true
