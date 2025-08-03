@@ -18,11 +18,12 @@ vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, {})
 
 -- linting and formatting keybinds
-vim.keymap.set("n", "cg", vim.lsp.buf.format, {})
+vim.keymap.set("n", "<space>gg", vim.lsp.buf.format, {})
+-- vim.keymap.set("n", "<space>cd", vim.lsp.buf.linting, {})
 
 -- debugger keybinds
 vim.keymap.set('n', 'dt', function() require('dap').toggle_breakpoint() end)
 vim.keymap.set('n', 'dc', function() require('dap').continue() end)
 
 -- toggle terminal
-vim.keymap.set('n', '<C-x>', '<CMD>lua require("FTerm").toggle()<CR>')
+-- vim.keymap.set('n', '<C-x>', '<CMD>lua require("FTerm").toggle()<CR>')

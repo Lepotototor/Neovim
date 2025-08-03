@@ -12,12 +12,9 @@ return {
     config = function()
       require("mason-lspconfig").setup({
         ensure_installed = {
-          "clangd",
           "lua_ls",
-          "csharp_ls",
-          "ocamllsp",
-          "pylsp",
-          "ltex",
+          -- "asm-lsp",
+          -- "clangd",
         },
       })
     end,
@@ -37,26 +34,26 @@ return {
         capabilities = capabilities,
       })
 
-      lspconfig.ocamllsp.setup({
+      lspconfig.somesass_ls.setup({
         capabilities = capabilities,
       })
 
-      lspconfig.csharp_ls.setup({
+      lspconfig.biome.setup({
         capabilities = capabilities,
+        cmd = { 'biome', 'lsp-proxy' },
+        root_dir = lspconfig.util.root_pattern('biome.json', 'biome.jsonc'),
+        single_file_support = false,
       })
 
       lspconfig.clangd.setup({
         capabilities = capabilities,
+        cmd = { "clangd", "--header-insertion=never", "--header-insertion-decorators=0" },
+        init_options = {
+          -- compilationDatabasePath = "/path/to/compile_commands.json",
+          fallbackFlags = { "-I/usr/include/gtk-3.0" },
+        },
       })
 
-      -- lspconfig.omnisharp.setup({
-      --   cmd = {
-      --     "mono",
-      --     "--assembly-loader=strict",
-      --     "/home/lepotototor/.config/nvim/omnisharp/" .. "/omnisharp/OmniSharp.exe",
-      --   },
-      --   use_mono = true,
-      -- })
-    end,
+          end,
   },
 }
