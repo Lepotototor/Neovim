@@ -6,6 +6,7 @@
         "themes",
         "current",
         "nb_themes",
-        "theme_manager"
+        "theme_manager",
+        "theme"
     ]
 }

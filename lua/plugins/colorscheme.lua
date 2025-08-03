@@ -1,11 +1,15 @@
 themes = {
   "rose-pine-dawn",
+  "everforest-light-soft",
+  "everforest-light-medium",
+  "everforest-light-hard",
+  "everforest-dark-medium",
   "catppuccin-latte",
+  "gruvbox-material",
   "retrobox",
   "peachpuff",
   "catppuccin-frappe",
   "rose-pine-moon",
-  "everforest",
   "rose-pine",
   "evening",
   "catppuccin-macchiato",
@@ -16,8 +20,30 @@ current = 1
 nb_themes = #themes
 
 function ChangeTheme()
-  vim.cmd.colorscheme(themes[current])
-  print("New theme is: " .. themes[current])
+  theme = themes[current]
+
+  -- 🎨 Traitement spécial Everforest
+  if theme:match("^everforest") then
+    local bg, contrast = theme:match("^[^-]+%-([^-]+)%-([^-]+)$")
+
+    vim.o.background = bg
+    package.loaded["everforest"] = nil
+
+    require("everforest").setup({
+      background = contrast,
+      contrast = contrast,
+      transparent_background_level = 0,
+      italics = true,
+    })
+
+    vim.cmd.colorscheme("default")
+    vim.cmd.colorscheme("everforest")
+    vim.notify("🌲 Theme: " .. theme)
+    return
+  end
+
+  vim.cmd.colorscheme(theme)
+  print("👨‍❤️‍💋‍👨 New theme is: " .. themes[current])
 end
 
 function IncrementTheme()
@@ -37,6 +63,7 @@ return {
   "rose-pine/neovim",
   "catppuccin/nvim",
   "neanias/everforest-nvim",
+  "sainnhe/gruvbox-material",
 
   vim.api.nvim_create_user_command("IncrementTheme", IncrementTheme, {}),
   vim.api.nvim_create_user_command("DecrementTheme", DecrementTheme, {}),
