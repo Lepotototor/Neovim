@@ -50,7 +50,7 @@ return {
         cmd = { "clangd", "--header-insertion=never", "--header-insertion-decorators=0" },
         init_options = {
           -- compilationDatabasePath = "/path/to/compile_commands.json",
-          fallbackFlags = { "-I/usr/include/gtk-3.0" },
+          -- fallbackFlags = { "-I/usr/include/gtk-3.0" },
         },
       })
 
