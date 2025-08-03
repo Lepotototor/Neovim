@@ -1,10 +1,15 @@
 themes = {
   "rose-pine-dawn",
   "catppuccin-latte",
+  "retrobox",
+  "peachpuff",
   "catppuccin-frappe",
   "rose-pine-moon",
+  "everforest",
   "rose-pine",
+  "evening",
   "catppuccin-macchiato",
+  "unokai",
   "catppuccin-mocha"
 }
 current = 1
@@ -31,6 +36,7 @@ end
 return {
   "rose-pine/neovim",
   "catppuccin/nvim",
+  "neanias/everforest-nvim",
 
   vim.api.nvim_create_user_command("IncrementTheme", IncrementTheme, {}),
   vim.api.nvim_create_user_command("DecrementTheme", DecrementTheme, {}),
