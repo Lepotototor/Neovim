@@ -15,6 +15,7 @@ vim.cmd("let mapleader = ' '")
 
 require("lazy").setup("plugins")
 require("vim-settings")
+require("java")
 require("keybindings")
 
 
