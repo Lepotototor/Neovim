@@ -5,7 +5,6 @@ themes = {
   "everforest-light-hard",
   "everforest-dark-medium",
   "catppuccin-latte",
-  "gruvbox-material",
   "retrobox",
   "peachpuff",
   "catppuccin-frappe",
@@ -63,7 +62,6 @@ return {
   "rose-pine/neovim",
   "catppuccin/nvim",
   "neanias/everforest-nvim",
-  "sainnhe/gruvbox-material",
 
   vim.api.nvim_create_user_command("IncrementTheme", IncrementTheme, {}),
   vim.api.nvim_create_user_command("DecrementTheme", DecrementTheme, {}),
