@@ -1,4 +1,5 @@
 themes = {
+  "rose-pine-moon",
   "rose-pine-dawn",
   "everforest-light-soft",
   "everforest-light-medium",
@@ -8,7 +9,6 @@ themes = {
   "retrobox",
   "peachpuff",
   "catppuccin-frappe",
-  "rose-pine-moon",
   "rose-pine",
   "evening",
   "catppuccin-macchiato",
@@ -70,6 +70,6 @@ return {
   vim.keymap.set("n", "<C-,>", ":DecrementTheme <CR>", {}),
 
   config = function()
-    vim.cmd.colorscheme("rose-pine-dawn")
+    vim.cmd.colorscheme("rose-pine-moon")
   end,
 }
