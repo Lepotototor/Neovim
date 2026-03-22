@@ -35,3 +35,12 @@ vim.api.nvim_create_autocmd("FileType", {
 		b.cindent = true
 	end,
 })
+
+vim.filetype.add({
+	extension = {
+		l = 'lex',
+		lex = 'lex',
+		y = 'yacc',
+		yacc = 'yacc',
+	},
+})

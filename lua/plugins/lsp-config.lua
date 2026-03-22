@@ -42,6 +42,9 @@ return {
 					"--header-insertion-decorators=0",
 					"--completion-style=detailed",
 				},
+				init_options = {
+					fallbackFlags = { '--std=c++20' }
+				},
 			})
 
 			vim.lsp.enable('lua_ls')

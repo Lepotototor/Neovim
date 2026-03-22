@@ -1,25 +1,25 @@
 return {
-  {
-    "norcalli/nvim-colorizer.lua",
+	{
+		"norcalli/nvim-colorizer.lua",
 
-    DEFAULT_OPTIONS = {
-      RGB      = true,         -- #RGB hex codes
-      RRGGBB   = true,         -- #RRGGBB hex codes
-      names    = true,         -- "Name" codes like Blue
-      RRGGBBAA = false,        -- #RRGGBBAA hex codes
-      rgb_fn   = false,        -- CSS rgb() and rgba() functions
-      hsl_fn   = false,        -- CSS hsl() and hsla() functions
-      css      = false,        -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
-      css_fn   = false,        -- Enable all CSS *functions*: rgb_fn, hsl_fn
-      -- Available modes: foreground, background
-      mode     = 'background', -- Set the display mode.
-    },
+		DEFAULT_OPTIONS = {
+			RGB      = true, -- #RGB hex codes
+			RRGGBB   = true, -- #RRGGBB hex codes #F15BB5
+			names    = true, -- "Name" codes like Blue Pink Green Red Orange Grey White Black
+			RRGGBBAA = false, -- #RRGGBBAA hex codes
+			rgb_fn   = false, -- CSS rgb() and rgba() functions
+			hsl_fn   = false, -- CSS hsl() and hsla() functions
+			css      = false, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
+			css_fn   = false, -- Enable all CSS *functions*: rgb_fn, hsl_fn
+			-- Available modes: foreground, background
+			mode     = 'background', -- Set the display mode.
+		},
 
-    event = "BufEnter",
-    opts = { "*" }
+		event = "BufEnter",
+		opts = { "*" }
 
-    -- Attaches to every FileType mode
-    -- require('colorizer').setup(),
+		-- Attaches to every FileType mode
+		-- require('colorizer').setup(),
 
-  },
+	},
 }

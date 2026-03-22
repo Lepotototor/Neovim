@@ -34,7 +34,7 @@ vim.keymap.set("n", "<leader>cw", "<cmd>ClangdAST<cr>", { desc = "C++ View AST" 
 vim.keymap.set("n", "<leader>ce", "<cmd>ClangdTypeHierarchy<cr>", { desc = "C++ Type Hierarchy" })
 
 vim.keymap.set({ "n", "i" }, "<M-;>", function()
-  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>A;<Esc>", true, false, true), "n", false)
+	vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>A;<Esc>", true, false, true), "n", false)
 end, { desc = "Ajouter ; en fin de ligne et sauter" })
 
 
@@ -45,6 +45,3 @@ vim.keymap.set("n", "<space>gg", vim.lsp.buf.format, {})
 -- debugger keybinds
 vim.keymap.set('n', 'dt', function() require('dap').toggle_breakpoint() end)
 vim.keymap.set('n', 'dc', function() require('dap').continue() end)
-
--- toggle terminal
--- vim.keymap.set('n', '<C-x>', '<CMD>lua require("FTerm").toggle()<CR>')
