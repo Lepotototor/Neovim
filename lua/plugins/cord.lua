@@ -6,7 +6,7 @@ return {
             require("cord").setup({
                 editor = {
                     client = 'neovim',
-                    tooltip = 'Apagnan sur Skibidi',
+                    tooltip = 'He gits on my branch until I commit',
                     icon = nil,
                 },
 
