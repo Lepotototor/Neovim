@@ -27,13 +27,8 @@ return {
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 			vim.lsp.config('lua_ls', { capabilities = capabilities })
-			vim.lsp.config('pylsp', { capabilities = capabilities })
 			vim.lsp.config('somesass_ls', { capabilities = capabilities })
-			vim.lsp.config('biome', {
-				capabilities = capabilities,
-				cmd = { 'biome', 'lsp-proxy' },
-				root_dir = vim.fs.root(0, { 'biome.json', 'biome.jsonc' }),
-			})
+			vim.lsp.config('vtsls', { capabilities = capabilities })
 			vim.lsp.config('clangd', {
 				capabilities = capabilities,
 				cmd = {
@@ -42,15 +37,11 @@ return {
 					"--header-insertion-decorators=0",
 					"--completion-style=detailed",
 				},
-				init_options = {
-					fallbackFlags = { '--std=c++20' }
-				},
 			})
 
 			vim.lsp.enable('lua_ls')
-			vim.lsp.enable('pylsp')
 			vim.lsp.enable('somesass_ls')
-			vim.lsp.enable('biome')
+			vim.lsp.enable('vtsls')
 			vim.lsp.enable('clangd')
 
 			require("clangd_extensions").setup({
