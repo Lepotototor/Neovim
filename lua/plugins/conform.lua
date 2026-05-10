@@ -7,6 +7,9 @@ return {
 			lua = { "stylua" },
 			cpp = { "clang-format" },
 			c = { "clang-format" },
+
+			javascript = { "prettierd" },
+			typescript = { "prettierd" },
 		},
 		-- La partie magique : le formatage à l'enregistrement
 		format_on_save = {
